@@ -1,0 +1,4 @@
+Invoke-WebRequest -Uri http://127.0.0.1:6000/remember `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"note":"Customer reported a billing issue with invoices, resolved by patching the system."}'

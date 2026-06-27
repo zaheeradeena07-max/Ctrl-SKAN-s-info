@@ -1,0 +1,25 @@
+rules:
+  - match: "customer"
+    model: "support_model"
+  - match: "ticket"
+    model: "support_model"
+  - match: "billing"
+    model: "billing_model"
+  - match: "invoice"
+    model: "billing_model"
+  - match: "payment"
+    model: "billing_model"
+  - match: "login"
+    model: "auth_model"
+  - match: "password"
+    model: "auth_model"
+  - match: "outage"
+    model: "incident_model"
+  - match: "error"
+    model: "incident_model"
+  - match: "common issues"
+    model: "analytics_model"
+  - default: "general_model"
+
+
+

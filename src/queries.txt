@@ -1,0 +1,5 @@
+Has this customer reported similar issues before?
+What was the resolution for ticket #1234?
+Show previous conversations with this customer.
+What are the most common issues from premium customers?
+Which customers were affected by last week's outage?
