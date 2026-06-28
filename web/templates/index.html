@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TRUST OS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f0f8ff, #e6f7ff);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #0066cc;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            border: 2px solid #0066cc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004c99;
+        }
+        h2 {
+            color: #009933;
+            margin-top: 30px;
+        }
+        p {
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            margin: 10px auto;
+            padding: 15px;
+            width: 60%;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+        }
+        li:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .resolved {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>TRUST OS</h1>
+    <form method="POST">
+        <input type="text" name="query" placeholder="Enter your query">
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if response %}
+        <h2>Response</h2>
+        <p>Total Matches: {{ response.total_matches }}</p>
+        <ul>
+            {% for note in response.matches %}
+                <li>{{ note }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
